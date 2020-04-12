@@ -68,14 +68,14 @@ void szukaj(char* sciezka, char* wzorzec)
 			if (v)
 			{
 				snprintf(output, sizeof(output), "porownanie: %s z %s", wzorzec, sciezka_nowa);
-				//wyslij(output);
+				wyslij(output);
 			}
 
 			/* sprawdzenie czy podany wzorzec jest fragmentem nazwy wpisu - jeśli tak, wysyłany jest komunikat do syslogu */
 			if (strstr(wpis->d_name, wzorzec))
 			{
 				snprintf(output, sizeof(output), "odnaleziono: %s - %s", wzorzec, sciezka_nowa);
-				//wyslij(output);
+				wyslij(output);
 			}
 
 			/* sprawdzenie czy wpis jest katalogiem i czy ma prawa odczytu i wykonania - jeśli tak,
